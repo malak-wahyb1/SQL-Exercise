@@ -21,3 +21,15 @@ INSERT INTO graduated (name,Age,Gender,Points) SELECT name,Age,gender,Points FRO
 UPDATE graduated SET Graduation= "08/09/2018" WHERE name="Layal";
 
 DELETE FROM students WHERE name="Layal";
+
+
+
+### Joins
+SELECT employees.Name, employees.Company, companies.Date
+FROM employees
+INNER JOIN companies ON companies.Name = employees.Company;
+
+SELECT employees.name FROM employees INNER JOIN companies ON employees.Company=companies.Name
+ WHERE companies.Date<2000
+
+ SELECT Company FROM employees WHERE Role="Graphic Designer"
